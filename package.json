@@ -1,0 +1,14 @@
+{
+  "name": "stardew-valley-wiki",
+  "version": "1.0.0",
+  "description": "Stardew Valley Wiki",
+  "main": "main.js",
+  "author": "yukino-des",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.1.0"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
+}
