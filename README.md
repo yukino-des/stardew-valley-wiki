@@ -1,2 +1,2 @@
-# stardew-valley-wiki
-Stardew Valley Wiki
+# Yukino Image Resizer
+Yukino Image Resizer
