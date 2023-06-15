@@ -45,12 +45,11 @@ const menu = [
     ...(isMac ? [{
         label: app.name,
         submenu: [{ label: 'About', click: creatAboutWindow }]
-    }] : []),
-    { role: 'fileMenu' },
-    ...(!isMac ? [{
-        label: 'Help',
+    }] : [{
+        label: 'File',
         submenu: [{ lable: 'About', click: creatAboutWindow }]
-    }] : [])
+    }]),
+    { role: 'fileMenu' }
 ]
 
 ipcMain.on('image:resize', (e, options) => {
