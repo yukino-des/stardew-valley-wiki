@@ -8,7 +8,7 @@ const widthInput = document.querySelector('#width')
 function loadImage(e) {
     const file = e.target.files[0]
     if (!isImage(file)) {
-        alert('Please select an image', true)
+        alert('Please select an image', false)
         return
     }
     const image = new Image()
@@ -36,7 +36,7 @@ function sendImage(e) {
         alert('Please fill in width and height', false)
         return
     }
-    ipcRenderer.send('image:resize', { imagePath, width, height })
+    ipcRenderer.send('image:resize', {imagePath, width, height})
 }
 
 ipcRenderer.on('image:done', () => {

@@ -2,7 +2,7 @@ const path = require('path')
 const os = require('os')
 const fs = require('fs')
 const resizeImg = require('resize-img')
-const { app, BrowserWindow, Menu, ipcMain, shell } = require('electron')
+const {app, BrowserWindow, Menu, ipcMain, shell} = require('electron')
 const isMac = process.platform === 'darwin'
 let mainWindow = null
 
@@ -42,13 +42,13 @@ app.whenReady().then(() => {
 })
 
 const menu = [
-    { role: 'fileMenu' },
+    {role: 'fileMenu'},
     ...(isMac ? [{
         label: app.name,
-        submenu: [{ label: 'About', click: creatAboutWindow }]
+        submenu: [{label: 'About', click: creatAboutWindow}]
     }] : [{
         label: 'Help',
-        submenu: [{ lable: 'About', click: creatAboutWindow }]
+        submenu: [{lable: 'About', click: creatAboutWindow}]
     }]),
 ]
 
@@ -57,7 +57,7 @@ ipcMain.on('image:resize', (e, options) => {
     resizeImage(options)
 })
 
-async function resizeImage({ imagePath, width, height, destination }) {
+async function resizeImage({imagePath, width, height, destination}) {
     try {
         const resizedPath = await resizeImg(fs.readFileSync(imagePath), {
             width: +width,
@@ -68,7 +68,9 @@ async function resizeImage({ imagePath, width, height, destination }) {
         fs.writeFileSync(path.join(destination, filename), resizedPath)
         mainWindow.webContents.send('image:done')
         shell.openPath(destination)
-    } catch (error) { console.log(error) }
+    } catch (error) {
+        console.log(error)
+    }
 }
 
 app.on('window-all-closed', () => {
