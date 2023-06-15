@@ -59,7 +59,7 @@ const menu = [
 ]
 
 ipcMain.on('image:resize', (e, options) => {
-    options.destination = path.join(os.homedir(), 'yukino-image-resizer')
+    options.destination = path.join(os.homedir(), 'yukino-image-resized')
     resizeImage(options)
 })
 
