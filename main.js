@@ -44,18 +44,13 @@ app.whenReady().then(() => {
 const menu = [
     ...(isMac ? [{
         label: app.name,
-        submenu: [{
-            label: 'About',
-            click: creatAboutWindow
-        }]
-    }] : [{
-        label: 'Help',
-        submenu: [{
-            lable: 'About',
-            click: creatAboutWindow
-        }]
-    }]),
+        submenu: [{ label: 'About', click: creatAboutWindow }]
+    }] : []),
     { role: 'fileMenu' },
+    ...(!isMac ? [{
+        label: 'Help',
+        submenu: [{ lable: 'About', click: creatAboutWindow }]
+    }] : [])
 ]
 
 ipcMain.on('image:resize', (e, options) => {
