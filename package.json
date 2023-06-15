@@ -7,20 +7,12 @@
   "author": "yukino-des",
   "license": "MIT",
   "devDependencies": {
-    "@electron-forge/cli": "^6.1.1",
-    "@electron-forge/maker-deb": "^6.1.1",
-    "@electron-forge/maker-rpm": "^6.1.1",
-    "@electron-forge/maker-squirrel": "^6.1.1",
-    "@electron-forge/maker-zip": "^6.1.1",
     "electron": "^25.1.0"
   },
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make"
+    "start": "electron ."
   },
   "dependencies": {
-    "electron-squirrel-startup": "^1.0.0",
     "resize-img": "^2.0.0",
     "toastify-js": "^1.12.0"
   }

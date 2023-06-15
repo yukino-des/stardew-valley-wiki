@@ -58,7 +58,6 @@ const menu = [
     { role: 'fileMenu' },
 ]
 
-// Respond to ipcRenderer resize
 ipcMain.on('image:resize', (e, options) => {
     options.destination = path.join(os.homedir(), 'yukino-image-resizer')
     resizeImage(options)
