@@ -6,7 +6,7 @@ npm install resize-img toastify-js
 ```
 
 ```shell
-npm install
+npm start
 # or
 npx electronmon .
 ```
