@@ -19,7 +19,7 @@ function loadImage(e) {
     }
     form.style.display = 'block'
     filename.innerText = file.name
-    outputPath.innerText = path.join(os.homedir(), 'yukino-image-resizer')
+    outputPath.innerText = path.join(os.homedir(), 'yukino-image-resized')
 }
 
 function sendImage(e) {
