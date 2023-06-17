@@ -1,0 +1,19 @@
+{
+  "name": "yukino-image-resizer",
+  "productName": "Yukino Image Resizer",
+  "version": "1.0.0",
+  "description": "Yukino Image Resizer",
+  "main": "main.js",
+  "author": "yukino-des",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^25.1.0"
+  },
+  "scripts": {
+    "start": "electron ."
+  },
+  "dependencies": {
+    "resize-img": "^2.0.0",
+    "toastify-js": "^1.12.0"
+  }
+}
